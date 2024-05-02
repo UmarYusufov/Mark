@@ -15,7 +15,7 @@
 * date_and_time(дата и время, varchar(199));
 * information_about_the_accused(Свидение об обвиняемых(799)).
 
-![](screenshots./msg1276890825-32239.jpg)	![](screenshots./msg1276890825-32308.jpg)
+![](screenshots./crime1.png)	![](screenshots./crime2.png)
 
 	Таблица "detainess", которая содержит атрибуты
 * detainessid(Айди задержанного, настроен по умолчанию, int);
