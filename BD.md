@@ -9,15 +9,15 @@
 * evidence(свидетельства).
 
 ##  2.1
-	 Таблица "crime", которая содержит атрибуты
+	 Таблица "crime", которая содержит атрибуты:
 * crimeid(Айди преступления, настроен по умолчанию, int);
 * description(Описание, varchar(799));
 * date_and_time(дата и время, varchar(199));
 * information_about_the_accused(Свидение об обвиняемых(799)).
 
-![](screenshots./crime1.png)	![](screenshots./crime2.png)
+![](screenshots/crime1.png)	![](screenshots/crime2.png)
 
-	Таблица "detainess", которая содержит атрибуты
+	Таблица "detainess", которая содержит атрибуты:
 * detainessid(Айди задержанного, настроен по умолчанию, int);
 * id_employee(Айди сотрудника, int);
 * id_crime(Айди преступления, int);
@@ -26,7 +26,7 @@
 
 ![](						![](
 
-	Таблица "documents", которая содержит атрибуты
+	Таблица "documents", которая содержит атрибуты:
 * documentsid(Айди документа, настроен по умолчанию, int);
 * id_crime(Айди преступления, int);
 * date_of_creation(Дата создания, varchar(799));
@@ -34,7 +34,7 @@
 
 ![](						![](
 
-	Таблица "employee", которая содержит атрибуты	
+	Таблица "employee", которая содержит атрибуты:	
 * employeeid(Айди сотрудника, настроен по умолчанию, int);
 * fullname(Имя, varchar(199));
 * rank(Звание, varchar(199));
