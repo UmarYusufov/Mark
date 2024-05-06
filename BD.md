@@ -49,6 +49,9 @@
 * witness_details(Данные свидетеля, varchar(199));
 * id_crime(Айди преступления, int).
 
+## 3. Демонстрация работы функции UNION
+Объединение двух наборов строк. Я объединил date_of_creation и date_and_time из таблицы crime.
+
 ```
 SELECT date_of_creation as Дата_создания_о_преступлениях
 from documents
@@ -56,3 +59,13 @@ UNION
 SELECT date_and_time AS Дата_создания_о_преступлениях
 FROM crime
 ```
+![](screenshots/
+
+## 4. Демонстрация работы функции ORDER BY
+Сортировка данных. Я отсортировал описание преступления по возрастанию.
+```
+SELECT date_and_time, description
+FROM crime
+ORDER BY description ASC
+```
+![](screenshots/
