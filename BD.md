@@ -8,11 +8,13 @@
 * employee(сотрудник);
 * evidence(свидетельства).
 
+  ![](screenshots/supabase.png)
+
 ##  2.1
 	 Таблица "crime", которая содержит атрибуты:
 * crimeid(Айди преступления, настроен по умолчанию, int);
 * description(Описание, varchar(799));
-* date_and_time(дата и время, varchar(199));
+* date_and_time(Дата и время, varchar(199));
 * information_about_the_accused(Свидение об обвиняемых(799)).
 
 ![](screenshots/crime1.png)	![](screenshots/Crime2.png)
@@ -44,4 +46,13 @@
 	Таблица "evidence", которая содержит атрибуты
 * evidenceid(Айди свидетельства, настроен по умолчанию, int);
 * description(Описание, varchar(799));
-* witness_details()
+* witness_details(Данные свидетеля, varchar(199));
+* id_crime(Айди преступления, int).
+
+```
+SELECT date_of_creation as Дата_создания_о_преступлениях
+from documents
+UNION
+SELECT date_and_time AS Дата_создания_о_преступлениях
+FROM crime
+```
