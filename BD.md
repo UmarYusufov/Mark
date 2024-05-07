@@ -105,3 +105,57 @@ WHERE description LIKE '%о'
 ```
 
 ![](screenshots/WHERE.png)
+
+## 7. Демонстрация работы оконных функций:
+### 7.1. Агрегатные функции
+С помощью функции MIN я нашел минимальную стоимость стрижки, с помощью функции MAX я нашел максимальную стоимость стрижки, с помощью функции SUM я нашел суммарную стоимость стрижек, с помощью функции AVG я нашел среднюю стоимость стрижки, с помощью функции COUNT я подсчитал количество рейтингов, равному 5
+```
+SELECT 
+    MIN(Price) AS Минимальная_стоимость,
+    MAX(Price) as Максимальная_стоимость,
+    SUM(Price) as Сумма,
+    AVG(Price) as Средняя_стоимость,
+    (SELECT COUNT(*) FROM Feedback WHERE Rating = 5) as Рейтинг_5 
+FROM Services
+```
+
+![](screenshots/agregate.png)
+
+### 7.2. Ранжирующие функции
+Возвращают значение для каждой строки группы в результирующем наборе данных.
+```
+SELECT serviceid,
+	description,
+	price,
+	ROW_NUMBER() OVER(PARTITION BY description ORDER BY price) AS 'row_number',
+	RANK() OVER(PARTITION BY description ORDER BY price) AS 'rank',
+	DENSE_RANK() OVER(PARTITION BY description ORDER BY price) AS 'dense_rank'
+FROM Services;
+```
+
+![](screenshots/range.png)
+
+### 7.3. Функции смещения
+Функции, которые позволяют перемещаться и обращаться к разным строкам в окне.
+```
+SELECT serviceid,
+	description,
+	price,
+	LAG(price) OVER(PARTITION BY description ORDER BY price) AS 'lag',
+	LEAD(price) OVER(PARTITION BY description ORDER BY price) AS 'lead',
+	FIRST_VALUE(price) OVER(PARTITION BY description ORDER BY price) AS 'first_value',
+	LAST_VALUE(price) OVER(PARTITION BY description ORDER BY price) AS 'last_value'
+FROM Services;
+```
+
+![](screenshots/smesh.png)
+
+## 8. Демонстрация работы JOIN'ов:
+### 8.1. INNER JOIN
+Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+```
+SELECT Name, reviewtext
+FROM Clients JOIN Feedback ON Feedback.ClientID = Clients.ClientID
+```
+
+![](screenshots/join.png)
