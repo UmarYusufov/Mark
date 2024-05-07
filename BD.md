@@ -74,7 +74,7 @@ ORDER BY description ASC
 ![](screenshots/ORDERBY1.png)
 
 ## 5. Демонстрация работы функции HAVING
-Я отфильтровал фамилии свидетелей, которые заканчиваются на "а"
+Я отфильтровал фамилии свидетелей, которые заканчиваются на букву "а"
 ```
 SELECT firstname AS Фамилия FROM witnesses
 GROUP BY firstname
@@ -97,7 +97,7 @@ WHERE rank =
 ![](screenshots/SELECT.png)
 
 ### 6.2. В WHERE
-Вывел имена клиентов, чье имя не заканчивается на букву 'а'
+Вывел те преступления, которые заканчиваются на букву "о"
 ```
 SELECT description
 FROM crime
