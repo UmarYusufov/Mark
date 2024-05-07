@@ -1,4 +1,4 @@
-## Юсуфов Умар Фалохиддинович
+## Юсуфов Умар Фалохиддинович	ИС-22/9-1
 
 ### 2.
 База данных полиции, в которую входит 5 таблиц:
@@ -6,7 +6,7 @@
 * detainess(задержанный);
 * documents(документы);
 * employee(сотрудник);
-* evidence(свидетельства).
+* witnesses(свидетели).
 
   ![](screenshots/supabase.png)
 
@@ -43,11 +43,11 @@
 
 ![](screenshots/Employee.png)			![](screenshots/Employee2.png)
 
-	Таблица "evidence", которая содержит атрибуты
-* evidenceid(Айди свидетельства, настроен по умолчанию, int);
-* description(Описание, varchar(799));
-* witness_details(Данные свидетеля, varchar(199));
-* id_crime(Айди преступления, int).
+	Таблица "witnesses", которая содержит атрибуты
+* witnessesid(Айди свидетельства, настроен по умолчанию, int);
+* id_crime(Айди преступления, int);
+* firstname(Фамилия, varchar(299));
+* lastname(Имя, varchar(299)).
 
 ## 3. Демонстрация работы функции UNION
 Объединение двух наборов строк. Я объединил date_of_creation и date_and_time из таблицы crime.
