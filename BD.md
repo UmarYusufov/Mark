@@ -95,3 +95,13 @@ WHERE rank =
 ```
 
 ![](screenshots/SELECT.png)
+
+### 6.2. В WHERE
+Вывел имена клиентов, чье имя не заканчивается на букву 'а'
+```
+SELECT description
+FROM crime
+WHERE description LIKE '%о'
+```
+
+![](screenshots/WHERE.png)
