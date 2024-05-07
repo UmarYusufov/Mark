@@ -119,13 +119,9 @@ FROM crime
 ### 7.2. Ранжирующие функции
 Возвращают значение для каждой строки группы в результирующем наборе данных.
 ```sql
-SELECT serviceid,
-	description,
-	price,
-	ROW_NUMBER() OVER(PARTITION BY description ORDER BY price) AS 'row_number',
-	RANK() OVER(PARTITION BY description ORDER BY price) AS 'rank',
-	DENSE_RANK() OVER(PARTITION BY description ORDER BY price) AS 'dense_rank'
-FROM Services;
+SELECT firstname,
+RANK() OVER(PARTITION BY firstname) AS Rank
+FROM witnesses
 ```
 
 ![](screenshots/range.png)
