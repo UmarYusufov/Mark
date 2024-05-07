@@ -81,3 +81,17 @@ GROUP BY firstname
 HAVING Фамилия LIKE '%а'
 ```
 ![](screenshots/having.png)
+
+## 6. Демонстрация работы вложенных запросов
+### 6.1. В SELECT
+Вывел клиента, чье имя Roma из таблицы Клиентов
+```
+SELECT fullname, rank
+FROM employee
+WHERE rank = 
+	(SELECT rank
+     from employee
+     WHERE rank = 'Капитан');
+```
+
+![](screens/SELECT.png)
