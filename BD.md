@@ -71,4 +71,4 @@ SELECT date_and_time, description
 FROM crime
 ORDER BY description ASC
 ```
-![](screenshots/
+![](screenshots/orderby.png)
