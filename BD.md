@@ -84,7 +84,7 @@ HAVING Фамилия LIKE '%а'
 
 ## 6. Демонстрация работы вложенных запросов
 ### 6.1. В SELECT
-Вывел клиента, чье имя Roma из таблицы Клиентов
+Вывел тех сотрудников, чье звание "Капитан"
 ```
 SELECT fullname, rank
 FROM employee
@@ -94,4 +94,4 @@ WHERE rank =
      WHERE rank = 'Капитан');
 ```
 
-![](screens/SELECT.png)
+![](screenshots/SELECT.png)
