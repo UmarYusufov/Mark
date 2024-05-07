@@ -54,8 +54,8 @@
 ## 3. Демонстрация работы функции UNION
 Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witnesses.
 
-```
-SELECT firstname as Фамилия_И_Имя_Свидетеля
+```sql
+SELECT firstname AS Фамилия_И_Имя_Свидетеля
 from witnesses	
 UNION
 SELECT lastname AS Фамилия_И_Имя_Свидетеля
@@ -66,7 +66,7 @@ FROM witnesses
 
 ## 4. Демонстрация работы функции ORDER BY
 Сортировка данных. Я отсортировал описание преступления по возрастанию.
-```
+```sql
 SELECT date_and_time, description
 FROM crime
 ORDER BY description ASC
@@ -75,7 +75,7 @@ ORDER BY description ASC
 
 ## 5. Демонстрация работы функции HAVING
 Я отфильтровал фамилии свидетелей, которые заканчиваются на букву "а"
-```
+```sql
 SELECT firstname AS Фамилия FROM witnesses
 GROUP BY firstname
 HAVING Фамилия LIKE '%а'
@@ -85,7 +85,7 @@ HAVING Фамилия LIKE '%а'
 ## 6. Демонстрация работы вложенных запросов
 ### 6.1. В SELECT
 Вывел тех сотрудников, чье звание "Капитан"
-```
+```sql
 SELECT fullname, rank
 FROM employee
 WHERE rank = 
@@ -98,7 +98,7 @@ WHERE rank =
 
 ### 6.2. В WHERE
 Вывел те преступления, которые заканчиваются на букву "о"
-```
+```sql
 SELECT description
 FROM crime
 WHERE description LIKE '%о'
@@ -108,22 +108,17 @@ WHERE description LIKE '%о'
 
 ## 7. Демонстрация работы оконных функций:
 ### 7.1. Агрегатные функции
-С помощью функции MIN я нашел минимальную стоимость стрижки, с помощью функции MAX я нашел максимальную стоимость стрижки, с помощью функции SUM я нашел суммарную стоимость стрижек, с помощью функции AVG я нашел среднюю стоимость стрижки, с помощью функции COUNT я подсчитал количество рейтингов, равному 5
-```
-SELECT 
-    MIN(Price) AS Минимальная_стоимость,
-    MAX(Price) as Максимальная_стоимость,
-    SUM(Price) as Сумма,
-    AVG(Price) as Средняя_стоимость,
-    (SELECT COUNT(*) FROM Feedback WHERE Rating = 5) as Рейтинг_5 
-FROM Services
+С помощью функции COUNT возвращаю количество преступлений
+```sql
+SELECT COUNT(description) AS Количество_преступлений
+FROM crime
 ```
 
 ![](screenshots/agregate.png)
 
 ### 7.2. Ранжирующие функции
 Возвращают значение для каждой строки группы в результирующем наборе данных.
-```
+```sql
 SELECT serviceid,
 	description,
 	price,
@@ -137,7 +132,7 @@ FROM Services;
 
 ### 7.3. Функции смещения
 Функции, которые позволяют перемещаться и обращаться к разным строкам в окне.
-```
+```sql
 SELECT serviceid,
 	description,
 	price,
@@ -153,7 +148,7 @@ FROM Services;
 ## 8. Демонстрация работы JOIN'ов:
 ### 8.1. INNER JOIN
 Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
-```
+```sql
 SELECT Name, reviewtext
 FROM Clients JOIN Feedback ON Feedback.ClientID = Clients.ClientID
 ```
