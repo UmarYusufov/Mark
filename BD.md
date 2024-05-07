@@ -129,14 +129,9 @@ FROM witnesses
 ### 7.3. Функции смещения
 Функции, которые позволяют перемещаться и обращаться к разным строкам в окне.
 ```sql
-SELECT serviceid,
-	description,
-	price,
-	LAG(price) OVER(PARTITION BY description ORDER BY price) AS 'lag',
-	LEAD(price) OVER(PARTITION BY description ORDER BY price) AS 'lead',
-	FIRST_VALUE(price) OVER(PARTITION BY description ORDER BY price) AS 'first_value',
-	LAST_VALUE(price) OVER(PARTITION BY description ORDER BY price) AS 'last_value'
-FROM Services;
+SELECT description, date_and_time,
+LAG(date_and_time) OVER(PARTITION BY description) AS Lag
+FROM crime
 ```
 
 ![](screenshots/smesh.png)
