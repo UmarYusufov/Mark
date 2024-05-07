@@ -55,11 +55,11 @@
 Объединение двух наборов строк. Я объединил date_of_creation и date_and_time из таблицы crime.
 
 ```
-SELECT date_of_creation as Дата_создания_о_преступлениях
-from documents
+SELECT firstname as Фамилия_И_Имя_Свидетеля
+from witnesses	
 UNION
-SELECT date_and_time AS Дата_создания_о_преступлениях
-FROM crime
+SELECT lastname AS Фамилия_И_Имя_Свидетеля
+FROM witnesses
 ```
 ![](screenshots/
 
