@@ -49,6 +49,8 @@
 * firstname(Фамилия, varchar(299));
 * lastname(Имя, varchar(299)).
 
+![](screenshots/witnesses.png)			![](screenshots/witnesses2.png)	
+
 ## 3. Демонстрация работы функции UNION
 Объединение двух наборов строк. Я объединил date_of_creation и date_and_time из таблицы crime.
 
