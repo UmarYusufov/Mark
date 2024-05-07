@@ -61,7 +61,8 @@ UNION
 SELECT lastname AS Фамилия_И_Имя_Свидетеля
 FROM witnesses
 ```
-![](screenshots/
+![](screenshots/Union.png)			
+![](screenshots/Union2.png)
 
 ## 4. Демонстрация работы функции ORDER BY
 Сортировка данных. Я отсортировал описание преступления по возрастанию.
