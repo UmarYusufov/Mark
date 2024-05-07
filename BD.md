@@ -56,7 +56,7 @@
 
 ```sql
 SELECT firstname AS Фамилия_И_Имя_Свидетеля
-from witnesses	
+FROM witnesses	
 UNION
 SELECT lastname AS Фамилия_И_Имя_Свидетеля
 FROM witnesses
@@ -90,8 +90,8 @@ SELECT fullname, rank
 FROM employee
 WHERE rank = 
 	(SELECT rank
-     from employee
-     WHERE rank = 'Капитан');
+     	FROM employee
+     	WHERE rank = 'Капитан');
 ```
 
 ![](screenshots/SELECT.png)
