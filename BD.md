@@ -52,7 +52,7 @@
 ![](screenshots/witnesses.png)			![](screenshots/witnesses2.png)	
 
 ## 3. Демонстрация работы функции UNION
-Объединение двух наборов строк. Я объединил date_of_creation и date_and_time из таблицы crime.
+Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witnesses.
 
 ```
 SELECT firstname as Фамилия_И_Имя_Свидетеля
