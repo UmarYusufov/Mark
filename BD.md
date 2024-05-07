@@ -72,3 +72,12 @@ FROM crime
 ORDER BY description ASC
 ```
 ![](screenshots/ORDERBY1.png)
+
+## 5. Демонстрация работы функции HAVING
+Я отфильтровал фамилии свидетелей, которые заканчиваются на "а"
+```
+SELECT firstname AS Фамилия FROM witnesses
+GROUP BY firstname
+HAVING Фамилия LIKE '%а'
+```
+![](screenshots/having.png)
