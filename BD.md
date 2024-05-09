@@ -39,9 +39,10 @@
 * employeeid(Айди сотрудника, настроен по умолчанию, int);
 * fullname(Имя, varchar(199));
 * rank(Звание, varchar(199));
-* telephone(Телефон, varchar(199)).
+* telephone(Телефон, varchar(199));
+* gender(Пол, text).
 
-![](screenshots/Employee.png)			![](screenshots/Employee2.png)
+![](screenshots/Employee.png)			![](screenshots/employeenew.png)
 
 	Таблица "witnesses", которая содержит атрибуты
 * witnessesid(Айди свидетеля, настроен по умолчанию, int);
