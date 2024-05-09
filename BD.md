@@ -8,7 +8,7 @@
 * employee(сотрудник);
 * witnesses(свидетели).
 
-  ![](screenshots/bazad.png)
+  ![](screenshots/bazenew.png)
 
 ##  2.1
 	 Таблица "crime", которая содержит атрибуты:
@@ -146,3 +146,15 @@ FROM Clients JOIN Feedback ON Feedback.ClientID = Clients.ClientID
 ```
 
 ![](screenshots/join.png)
+
+## 9. Демонстрация работы CASE
+Оператор позволяет осуществить проверку условий и возвратить в зависимости от выполнения того или иного условия тот или иной результат.
+```sql
+SELECT fullname,
+	CASE
+    	WHEN Gender = 'Мужчина' THEN 'Мужчина'
+        ELSE 'Женщина'
+    END AS Пол 
+FROM employee
+```
+![](screenshots/case.png)
