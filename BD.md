@@ -158,3 +158,12 @@ SELECT fullname,
 FROM employee
 ```
 ![](screenshots/case.png)
+
+## 10. Демонстрация работы WITH
+Используется для создания временных таблиц, которые можно использовать внутри запросов (trap).
+```sql
+WITH trap AS
+(SELECT fullname, telephone FROM employee)
+SELECT * FROM trap
+```
+![](screenshots/with.png)
