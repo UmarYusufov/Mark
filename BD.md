@@ -137,7 +137,7 @@ LAG(date_time) OVER(PARTITION BY description) AS Lag
 FROM crime
 ```
 
-![](screenshots/lag.png)
+![](screenshots/LAAG.png)
 
 ## 8. Демонстрация работы JOIN'ов:
 ### 8.1. INNER JOIN
