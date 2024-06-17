@@ -12,7 +12,7 @@
 
 ##  2.1
 	 Таблица "crime", которая содержит атрибуты:
-* crimeid(Айди преступления, настроен по умолчанию, int);
+* id(Айди преступления, настроен по умолчанию, int);
 * description(Описание, varchar(799));
 * date_time(Дата и время, varchar(199));
 * dossier(Свидение об обвиняемых(799)).
@@ -20,7 +20,7 @@
 ![](screenshots/crimenew.png)			![](screenshots/Crime2.png)
 
 	Таблица "detaine", которая содержит атрибуты:
-* detainessid(Айди задержанного, настроен по умолчанию, int);
+* id(Айди задержанного, настроен по умолчанию, int);
 * employee_id(Айди сотрудника, int);
 * crime_id(Айди преступления, int);
 * arrest(Дата и время задержания, varchar(799));
@@ -29,14 +29,14 @@
 ![](screenshots/detaineenew.png)			![](screenshots/detaineesnew.png)	
 
 	Таблица "document", которая содержит атрибуты:
-* documentsid(Айди документа, настроен по умолчанию, int);
+* id(Айди документа, настроен по умолчанию, int);
 * crime_id(Айди преступления, int);
 * date(Дата создания, varchar(799)).
 
 ![](screenshots/docnew.png)			![](screenshots/documentsnew.png)	
 
 	Таблица "employee", которая содержит атрибуты:	
-* employeeid(Айди сотрудника, настроен по умолчанию, int);
+* id(Айди сотрудника, настроен по умолчанию, int);
 * fullname(Имя, varchar(199));
 * rank(Звание, varchar(199));
 * telephone(Телефон, varchar(199));
@@ -45,7 +45,7 @@
 ![](screenshots/Employee.png)			![](screenshots/employeenew.png)
 
 	Таблица "witness", которая содержит атрибуты
-* witnessesid(Айди свидетеля, настроен по умолчанию, int);
+* id(Айди свидетеля, настроен по умолчанию, int);
 * crime_id(Айди преступления, int);
 * lastname(Имя, varchar(299));
 * firstname(Фамилия, varchar(299)).
