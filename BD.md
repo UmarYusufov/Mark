@@ -63,8 +63,7 @@ UNION
 SELECT lastname AS Фамилия_И_Имя_Свидетеля
 FROM witness
 ```
-![](screenshots/UNION11.png)			
-![](screenshots/UNION22.png)
+![](screenshots/UNION.png)		
 
 ## 4. Демонстрация работы функции ORDER BY
 Сортировка данных. Я отсортировал описание преступления по возрастанию.
@@ -73,7 +72,7 @@ SELECT date_time, description
 FROM crime
 ORDER BY description ASC
 ```
-![](screenshots/ORDERBY1.png)
+![](screenshots/order.png)
 
 ## 5. Демонстрация работы функции HAVING
 Я отфильтровал фамилии свидетелей, которые заканчиваются на букву "а"
@@ -127,7 +126,7 @@ RANK() OVER(PARTITION BY firstname) AS Rank
 FROM witness
 ```
 
-![](screenshots/range.png)
+![](screenshots/rank.png)
 
 ### 7.3. Функции смещения
 Функции, которые позволяют перемещаться и обращаться к разным строкам в окне.
@@ -137,7 +136,7 @@ LAG(date_time) OVER(PARTITION BY description) AS Lag
 FROM crime
 ```
 
-![](screenshots/LAAG.png)
+![](screenshots/LAG.png)
 
 ## 8. Демонстрация работы JOIN'ов:
 ### 8.1. INNER JOIN
