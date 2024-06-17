@@ -3,7 +3,7 @@
 ### 2.
 База данных полиции, в которую входит 5 таблиц:
 * crime(преступление);
-* detaine(задержанный);
+* detainee(задержанный);
 * document(документы);
 * employee(сотрудник);
 * witness(свидетели).
@@ -142,11 +142,47 @@ FROM crime
 ### 8.1. INNER JOIN
 Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
 ```sql
-SELECT Name, reviewtext
-FROM Clients JOIN Feedback ON Feedback.ClientID = Clients.ClientID
+SELECT DISTINCT date_time, description
+FROM crime INNER JOIN detainee ON crime.id = detainee.crime_id
 ```
 
-![](screenshots/join.png)
+![](screenshots/JOIN1.png)
+
+### 8.2. LEFT JOIN
+Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+```sql
+SELECT DISTINCT date_time, description
+FROM crime LEFT JOIN document ON crime.id = document.crime_id
+```
+
+![](screenshots/leftjoin.png)
+
+### 8.3. RIGHT JOIN
+Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+```sql
+SELECT DISTINCT date_time, description
+FROM crime RIGHT JOIN detainee ON crime.id = detainee.crime_id
+```
+
+![](screenshots/right.png)
+
+### 8.4. FULL JOIN
+Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+```sql
+SELECT DISTINCT date_time, description
+FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
+```
+
+![](screenshots/full.png)
+
+### 8.5. CROSS JOIN
+Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+```sql
+SELECT DISTINCT date_time, description
+FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
+```
+
+![](screenshots/cross.png)
 
 ## 9. Демонстрация работы CASE
 Оператор позволяет осуществить проверку условий и возвратить в зависимости от выполнения того или иного условия тот или иной результат.
