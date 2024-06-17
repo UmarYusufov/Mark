@@ -17,7 +17,7 @@
 * date_time(Дата и время, varchar(199));
 * dossier(Свидение об обвиняемых(799)).
 
-![](screenshots/crime1.png)			![](screenshots/Crime2.png)
+![](screenshots/crimenew.png)			![](screenshots/Crime2.png)
 
 	Таблица "detaine", которая содержит атрибуты:
 * detainessid(Айди задержанного, настроен по умолчанию, int);
@@ -26,14 +26,14 @@
 * arrest(Дата и время задержания, varchar(799));
 * detaile(Доп.детали задержания, varchar(799));
 
-![](screenshots/detainess.png)			![](screenshots/detaineesnew.png)	
+![](screenshots/detainenew.png)			![](screenshots/detaineesnew.png)	
 
 	Таблица "document", которая содержит атрибуты:
 * documentsid(Айди документа, настроен по умолчанию, int);
 * crime_id(Айди преступления, int);
 * date(Дата создания, varchar(799)).
 
-![](screenshots/documents.png)			![](screenshots/documentsnew.png)	
+![](screenshots/docnew.png)			![](screenshots/documentsnew.png)	
 
 	Таблица "employee", которая содержит атрибуты:	
 * employeeid(Айди сотрудника, настроен по умолчанию, int);
@@ -51,7 +51,7 @@
 * firstname(Фамилия, varchar(299)).
 
 
-![](screenshots/witnesses.png)			![](screenshots/witnessesnew.png)	
+![](screenshots/witnew.png)			![](screenshots/witnessesnew.png)	
 
 ## 3. Демонстрация работы функции UNION
 Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witnesses.
