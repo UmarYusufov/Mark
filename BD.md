@@ -146,7 +146,7 @@ SELECT DISTINCT date_time, description
 FROM crime INNER JOIN detainee ON crime.id = detainee.crime_id
 ```
 
-![](screenshots/JOIN1.png)
+![](screenshots/INNNER.png)
 
 ### 8.2. LEFT JOIN
 Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
@@ -179,7 +179,7 @@ FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
 Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
 ```sql
 SELECT DISTINCT date_time, description
-FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
+FROM crime CROSS JOIN detainee ON crime.id = detainee.crime_id
 ```
 
 ![](screenshots/cross.png)
