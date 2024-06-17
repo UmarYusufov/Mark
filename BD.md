@@ -54,7 +54,7 @@
 ![](screenshots/witnew.png)			![](screenshots/wit2.png)	
 
 ## 3. Демонстрация работы функции UNION
-Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witnesses.
+Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witness.
 
 ```sql
 SELECT firstname AS Фамилия_И_Имя_Свидетеля
