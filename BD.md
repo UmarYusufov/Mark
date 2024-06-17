@@ -17,7 +17,7 @@
 * date_time(Дата и время, varchar(199));
 * dossier(Свидение об обвиняемых(799)).
 
-![](screenshots/crimenew.png)			![](screenshots/Crime2.png)
+![](screenshots/crimenew.png)			![](screenshots/crime2new.png)
 
 	Таблица "detaine", которая содержит атрибуты:
 * id(Айди задержанного, настроен по умолчанию, int);
@@ -26,14 +26,14 @@
 * arrest(Дата и время задержания, varchar(799));
 * detaile(Доп.детали задержания, varchar(799));
 
-![](screenshots/detaineenew.png)			![](screenshots/detaineesnew.png)	
+![](screenshots/detaineenew.png)			![](screenshots/detaine2new.png)	
 
 	Таблица "document", которая содержит атрибуты:
 * id(Айди документа, настроен по умолчанию, int);
 * crime_id(Айди преступления, int);
 * date(Дата создания, varchar(799)).
 
-![](screenshots/docnew.png)			![](screenshots/documentsnew.png)	
+![](screenshots/docnew.png)			![](screenshots/doc2new.png)	
 
 	Таблица "employee", которая содержит атрибуты:	
 * id(Айди сотрудника, настроен по умолчанию, int);
