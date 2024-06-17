@@ -149,7 +149,7 @@ FROM crime INNER JOIN detainee ON crime.id = detainee.crime_id
 ![](screenshots/INNNER.png)
 
 ### 8.2. LEFT JOIN
-Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+Возвращает строки, содержащие данные из левой таблицы, даже если в правой таблице нет совпадающих строк.
 ```sql
 SELECT DISTINCT date_time, description
 FROM crime LEFT JOIN document ON crime.id = document.crime_id
@@ -158,7 +158,7 @@ FROM crime LEFT JOIN document ON crime.id = document.crime_id
 ![](screenshots/leftjoin.png)
 
 ### 8.3. RIGHT JOIN
-Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+Возвращает строки, содержащие данные из правой таблицы, даже если в левой таблице нет совпадающих строк.
 ```sql
 SELECT DISTINCT date_time, description
 FROM crime RIGHT JOIN detainee ON crime.id = detainee.crime_id
@@ -167,7 +167,7 @@ FROM crime RIGHT JOIN detainee ON crime.id = detainee.crime_id
 ![](screenshots/right.png)
 
 ### 8.4. FULL JOIN
-Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+Возвращает строки, содержащие данные из обеих таблиц.
 ```sql
 SELECT DISTINCT date_time, description
 FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
@@ -176,7 +176,7 @@ FROM crime FULL JOIN detainee ON crime.id = detainee.crime_id
 ![](screenshots/full.png)
 
 ### 8.5. CROSS JOIN
-Возвращает те строки, для которых в обеих таблицах выполняется условие соединения.
+Возвращает строки, содержащие все возможные комбинации левой и правой частей соединения.
 ```sql
 SELECT DISTINCT date_time, description
 FROM crime CROSS JOIN detainee ON crime.id = detainee.crime_id
