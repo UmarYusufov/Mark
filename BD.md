@@ -82,7 +82,7 @@ FROM witness
 GROUP BY firstname
 HAVING Фамилия LIKE '%а'
 ```
-![](screenshots/having.png)
+![](screenshots/having1.png)
 
 ## 6. Демонстрация работы вложенных запросов
 ### 6.1. В SELECT
