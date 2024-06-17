@@ -3,35 +3,35 @@
 ### 2.
 База данных полиции, в которую входит 5 таблиц:
 * crime(преступление);
-* detainess(задержанный);
-* documents(документы);
+* detaine(задержанный);
+* document(документы);
 * employee(сотрудник);
-* witnesses(свидетели).
+* witness(свидетели).
 
-  ![](screenshots/bazenew.png)
+  ![](screenshots/image.png)
 
 ##  2.1
 	 Таблица "crime", которая содержит атрибуты:
 * crimeid(Айди преступления, настроен по умолчанию, int);
 * description(Описание, varchar(799));
-* date_and_time(Дата и время, varchar(199));
-* information_about_the_accused(Свидение об обвиняемых(799)).
+* date_time(Дата и время, varchar(199));
+* dossier(Свидение об обвиняемых(799)).
 
 ![](screenshots/crime1.png)			![](screenshots/Crime2.png)
 
-	Таблица "detainess", которая содержит атрибуты:
+	Таблица "detaine", которая содержит атрибуты:
 * detainessid(Айди задержанного, настроен по умолчанию, int);
-* id_employee(Айди сотрудника, int);
-* id_crime(Айди преступления, int);
-* date_and_time_of_detention(Дата и время задержания, varchar(799));
-* additional_details_of_the_detention(Доп.детали задержания, varchar(799));
+* employee_id(Айди сотрудника, int);
+* crime_id(Айди преступления, int);
+* arrest(Дата и время задержания, varchar(799));
+* detaile(Доп.детали задержания, varchar(799));
 
 ![](screenshots/detainess.png)			![](screenshots/detaineesnew.png)	
 
-	Таблица "documents", которая содержит атрибуты:
+	Таблица "document", которая содержит атрибуты:
 * documentsid(Айди документа, настроен по умолчанию, int);
-* id_crime(Айди преступления, int);
-* date_of_creation(Дата создания, varchar(799)).
+* crime_id(Айди преступления, int);
+* date(Дата создания, varchar(799)).
 
 ![](screenshots/documents.png)			![](screenshots/documentsnew.png)	
 
@@ -44,11 +44,12 @@
 
 ![](screenshots/Employee.png)			![](screenshots/employeenew.png)
 
-	Таблица "witnesses", которая содержит атрибуты
+	Таблица "witness", которая содержит атрибуты
 * witnessesid(Айди свидетеля, настроен по умолчанию, int);
-* id_crime(Айди преступления, int);
-* firstname(Фамилия, varchar(299));
-* lastname(Имя, varchar(299)).
+* crime_id(Айди преступления, int);
+* lastname(Имя, varchar(299));
+* firstname(Фамилия, varchar(299)).
+
 
 ![](screenshots/witnesses.png)			![](screenshots/witnessesnew.png)	
 
@@ -57,10 +58,10 @@
 
 ```sql
 SELECT firstname AS Фамилия_И_Имя_Свидетеля
-FROM witnesses	
+FROM witness	
 UNION
 SELECT lastname AS Фамилия_И_Имя_Свидетеля
-FROM witnesses
+FROM witness
 ```
 ![](screenshots/UNION11.png)			
 ![](screenshots/UNION22.png)
@@ -68,7 +69,7 @@ FROM witnesses
 ## 4. Демонстрация работы функции ORDER BY
 Сортировка данных. Я отсортировал описание преступления по возрастанию.
 ```sql
-SELECT date_and_time, description
+SELECT date_time, description
 FROM crime
 ORDER BY description ASC
 ```
@@ -77,7 +78,8 @@ ORDER BY description ASC
 ## 5. Демонстрация работы функции HAVING
 Я отфильтровал фамилии свидетелей, которые заканчиваются на букву "а"
 ```sql
-SELECT firstname AS Фамилия FROM witnesses
+SELECT firstname AS Фамилия
+FROM witness
 GROUP BY firstname
 HAVING Фамилия LIKE '%а'
 ```
@@ -122,7 +124,7 @@ FROM crime
 ```sql
 SELECT firstname,
 RANK() OVER(PARTITION BY firstname) AS Rank
-FROM witnesses
+FROM witness
 ```
 
 ![](screenshots/range.png)
@@ -130,8 +132,8 @@ FROM witnesses
 ### 7.3. Функции смещения
 Функции, которые позволяют перемещаться и обращаться к разным строкам в окне.
 ```sql
-SELECT description, date_and_time,
-LAG(date_and_time) OVER(PARTITION BY description) AS Lag
+SELECT description, date_time,
+LAG(date_time) OVER(PARTITION BY description) AS Lag
 FROM crime
 ```
 
