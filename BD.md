@@ -26,7 +26,7 @@
 * arrest(Дата и время задержания, varchar(799));
 * detaile(Доп.детали задержания, varchar(799));
 
-![](screenshots/detainenew.png)			![](screenshots/detaineesnew.png)	
+![](screenshots/detaineenew.png)			![](screenshots/detaineesnew.png)	
 
 	Таблица "document", которая содержит атрибуты:
 * documentsid(Айди документа, настроен по умолчанию, int);
