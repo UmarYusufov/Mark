@@ -51,7 +51,7 @@
 * firstname(Фамилия, varchar(299)).
 
 
-![](screenshots/witnew.png)			![](screenshots/witnessesnew.png)	
+![](screenshots/witnew.png)			![](screenshots/wit2.png)	
 
 ## 3. Демонстрация работы функции UNION
 Объединение двух наборов строк. Я объединил firstname и lastname из таблицы witnesses.
